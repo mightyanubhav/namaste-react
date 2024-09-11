@@ -2,7 +2,7 @@
   "name": "namestereact1",
   "version": "1.0.0",
   "description": "this is Namaste react by Akshay Saini ",
-  "main": "App.js",
+ 
   "scripts": {
     "test": "jest"
   },
