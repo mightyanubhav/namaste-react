@@ -10,4 +10,6 @@
 	7) minify our file , for production project( Bundeling)
 	8) consistent hashing
 	9) Differential bunderling
+    10) Diagnostics
+    11) error handeling
 	
