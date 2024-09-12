@@ -53,6 +53,8 @@ const ReactComponent2 = function ()  {
             <ReactComponent/>
             <ReactComponent></ReactComponent>
             {ReactComponent()}
+            {/* These all are same thing  */}
+
             <h1> This is my file </h1>
             <SmallComponent/>
         </div>
