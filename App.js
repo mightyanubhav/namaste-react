@@ -30,27 +30,37 @@ import ReactDOM from "react-dom/client";
 
 
 const change = <h1 className="heading"> this is the jsx file</h1>;
+const ReactComponent = () =>{
+    return (
+        <h1> inside ReactComponent</h1>
+    );
+}
 const bigChange = (
     <div className = "name">
-        <div className = "name"></div>
+        <div className = "name">
+            {change}
+            <ReactComponent/>
+        </div>
     </div>
 );
 
 const SmallComponent = () => <p>Henry Griffin loves louis griffin</p>;
-const ReactComponent = () => {
+
+const number = 10000;
+const ReactComponent2 = function ()  {
     return (
-        <div>
+        <div id="container">
+            <ReactComponent/>
+            <ReactComponent></ReactComponent>
+            {ReactComponent()}
+            <h1> This is my file </h1>
             <SmallComponent/>
-            <h1> This is my file </h1>
-            <h1> This is my file </h1>
-            <h1> This is my file </h1>
         </div>
 
     )
 }
 ;
 
-
 const root = ReactDOM.createRoot(document.getElementById("root"));
-root.render(<ReactComponent/>);
+root.render(<ReactComponent2/>);
 
