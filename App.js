@@ -1,12 +1,14 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 
-const JsxHeading = () =>(
+const jsxHeading = (
     <h1 id="heading"> 
         Nameste React using jsx
     </h1>
 ) ;
 console.log(jsxHeading);
+
+const JsxHeading = () => <h1>Hello brother</h1>
 
 
 
@@ -26,4 +28,4 @@ const HeadingComponent2 = () => <h1>Again react functional Component</h1>;
 const HeadingComponent3 = () => true;
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
-root.render(JsxHeading);
+root.render(<JsxHeading></JsxHeading>);
