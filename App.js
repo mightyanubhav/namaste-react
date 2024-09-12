@@ -1,68 +1,54 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 
-// const jsxHeading = (
-//     <h1 id="heading"> 
-//         Nameste React using jsx
-//     </h1>
-// ) ;
-// console.log(jsxHeading);
-
-// const JsxHeading = () => <h1>Hello brother</h1>
-
-
-
-// // React Component 
-
-// const HeadingComponent = () => {
-// return(
-//         <div className="first">
-//             <h1 className="heading"> Nameste React functional Component</h1>
-//             <h1 className="heading"> Nameste React functional Component</h1>
-//             <h1 className="heading"> Nameste React functional Component</h1>     
-//         </div>
-        
-//     )
-// };
-// const HeadingComponent2 = () => <h1>Again react functional Component</h1>;
-// const HeadingComponent3 = () => true;
+/**
+ * 
+ * <div id = "title"> 
+ *      <h1> Anubhav Shukla </h1>
+ *      <h2> Ankit Shukla </h2>
+ *      <h3> Rekha Devi </h3>
+ * </div>
+ * 
+ */
 
 
+// const h1 = React.createElement("h1", null, "Anubhav Shukla");
+// const h2 = React.createElement("h2", null, "Ankit Shukla");
+// const h3 = React.createElement("h3", null, "Rekha Devi");
 
-const change = <h1 className="heading"> this is the jsx file</h1>;
-const ReactComponent = () =>{
-    return (
-        <h1> inside ReactComponent</h1>
-    );
-}
-const bigChange = (
-    <div className = "name">
-        <div className = "name">
-            {change}
-            <ReactComponent/>
-        </div>
+
+// const div = React.createElement("div", {id: "title"}, [h1, h2, h3]);
+
+const jsxElement = (
+    <div id="title">
+        <h1>Anubhav Shukla</h1>
+        <h2>Ankit Shukla</h2>
+        <h3>Rekha Shukla</h3>
     </div>
 );
 
-const SmallComponent = () => <p>Henry Griffin loves louis griffin</p>;
-
-const number = 10000;
-const ReactComponent2 = function ()  {
+const ReactComponent = () =>{
     return (
-        <div id="container">
-            <ReactComponent/>
-            <ReactComponent></ReactComponent>
-            {ReactComponent()}
-            {/* These all are same thing  */}
-
-            <h1> This is my file </h1>
-            <SmallComponent/>
+        <div id="title2">
+            {jsxElement}
+            <h1>Anubhav Shukla</h1>
+            <h2>Ankit Shukla</h2>
+            <h3>Rekha Shukla</h3>
         </div>
-
-    )
+    );
 }
-;
 
-const root = ReactDOM.createRoot(document.getElementById("root"));
-root.render(<ReactComponent2/>);
+const ReactComponent2 = () =>{
+    return (
+        <div id="title2">
+            {jsxElement}
+            <ReactComponent/>
+            <h1>Anubhav Shukla</h1>
+            <h2>Ankit Shukla</h2>
+            <h3>Rekha Shukla</h3>
+        </div>
+    );
+}
 
+const root = ReactDOM.createRoot(document.getElementById('root'));
+root.render(<ReactComponent2 />);
