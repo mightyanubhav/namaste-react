@@ -106,7 +106,7 @@ const Body = () =>{
             </div>
             <div className="res-container">  
                 {
-                    config.map(val_in_array => <RestaurantCard key={val_in_array.user.id} change={val_in_array}/>)
+                    config.map((val_in_array, index) => <RestaurantCard key={index} change={val_in_array}/>)
                 }
                 {/* <RestaurantCard
                     config = {config}
