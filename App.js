@@ -20,8 +20,8 @@ const Header = () =>{
 }
 
 const  RestaurantCard = (props) =>{
-    const {config} = props;
-    // const { user, settings } = config;
+    const {change} = props;
+   
     return (
         <div className="res-card">
             <div className="img-container">
@@ -30,24 +30,66 @@ const  RestaurantCard = (props) =>{
                 alt="no image" />
             </div>
             <div className="text-container">
-                <h3> {config.user.name}</h3>
+                <h3> {change.user.name}</h3>
                 <h4>Data wata</h4>
-                <h4>{config.settings[1]} </h4>
+                <h4>{change.user.age} </h4>
             </div>
         </div>
     );
 }
 
-const config = {
-    user: {
-      name: 'Bob',
-      age: 35
-    },
-    settings: [
-      'blue',
-      'fr'
-    ]
-  };
+const config = [
+    {
+        user: {
+          name: 'Bob',
+          age: 35
+        },
+        settings: [
+          'blue',
+          'fr'
+        ]
+      },
+      {
+        user: {
+          name: 'Bob',
+          age: 35
+        },
+        settings: [
+          'blue',
+          'fr'
+        ]
+      },
+      {
+        user: {
+          name: 'Bob',
+          age: 35
+        },
+        settings: [
+          'blue',
+          'fr'
+        ]
+      },
+      {
+        user: {
+          name: 'Bob',
+          age: 35
+        },
+        settings: [
+          'blue',
+          'fr'
+        ]
+      },
+      {
+        user: {
+          name: 'Bob',
+          age: 35
+        },
+        settings: [
+          'blue',
+          'fr'
+        ]
+      }
+];
   
 
 
@@ -58,13 +100,12 @@ const Body = () =>{
                 Search
             </div>
             <div className="res-container">  
+                {
+                    config.map(val => <RestaurantCard change={val}/>)
+                }
                 {/* <RestaurantCard
-                   config = { config }
-                /> */}
-                <RestaurantCard
                     config = {config}
-                   
-                />
+                /> */}
             </div>
         </div>
     );
