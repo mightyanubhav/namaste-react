@@ -19,7 +19,9 @@ const Header = () =>{
     );
 }
 
-const  RestaurantCard = () =>{
+const  RestaurantCard = (props) =>{
+    const {config} = props;
+    // const { user, settings } = config;
     return (
         <div className="res-card">
             <div className="img-container">
@@ -28,11 +30,26 @@ const  RestaurantCard = () =>{
                 alt="no image" />
             </div>
             <div className="text-container">
-                <h3> Meghana Foods </h3>
+                <h3> {config.user.name}</h3>
+                <h4>Data wata</h4>
+                <h4>{config.settings[1]} </h4>
             </div>
         </div>
     );
 }
+
+const config = {
+    user: {
+      name: 'Bob',
+      age: 35
+    },
+    settings: [
+      'blue',
+      'fr'
+    ]
+  };
+  
+
 
 const Body = () =>{
     return (
@@ -41,14 +58,13 @@ const Body = () =>{
                 Search
             </div>
             <div className="res-container">  
-                <RestaurantCard/>
-                <RestaurantCard/>
-                <RestaurantCard/>
-                <RestaurantCard/>
-                <RestaurantCard/>
-                <RestaurantCard/>
-                <RestaurantCard/>
-                
+                {/* <RestaurantCard
+                   config = { config }
+                /> */}
+                <RestaurantCard
+                    config = {config}
+                   
+                />
             </div>
         </div>
     );
