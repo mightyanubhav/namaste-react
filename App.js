@@ -42,7 +42,30 @@ const config = [
     {
         user: {
           name: 'Bob',
-          age: 35
+          age: 35,
+          id:'a'
+        },
+        settings: [
+          'blue',
+          'fr',
+        ]
+      },
+      {
+        user: {
+          name: 'marlin',
+          age: 30,
+          id:'b'
+        },
+        settings: [
+          'blue',
+          'fr',
+        ]
+      },
+      {
+        user: {
+          name: 'Bob',
+          age: 35,
+          id:'c'
         },
         settings: [
           'blue',
@@ -52,7 +75,8 @@ const config = [
       {
         user: {
           name: 'Bob',
-          age: 35
+          age: 35,
+          id:'d'
         },
         settings: [
           'blue',
@@ -62,27 +86,8 @@ const config = [
       {
         user: {
           name: 'Bob',
-          age: 35
-        },
-        settings: [
-          'blue',
-          'fr'
-        ]
-      },
-      {
-        user: {
-          name: 'Bob',
-          age: 35
-        },
-        settings: [
-          'blue',
-          'fr'
-        ]
-      },
-      {
-        user: {
-          name: 'Bob',
-          age: 35
+          age: 35,
+          id:'e'
         },
         settings: [
           'blue',
@@ -101,7 +106,7 @@ const Body = () =>{
             </div>
             <div className="res-container">  
                 {
-                    config.map(val => <RestaurantCard change={val}/>)
+                    config.map(val_in_array => <RestaurantCard key={val_in_array.user.id} change={val_in_array}/>)
                 }
                 {/* <RestaurantCard
                     config = {config}
