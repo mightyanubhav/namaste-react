@@ -107,6 +107,8 @@ const Body = () =>{
             <div className="res-container">  
                 {
                     config.map((val_in_array, index) => <RestaurantCard key={index} change={val_in_array}/>)
+                    // key should not be used as index as a key not recommended
+                    // not using keys is not acceptable , if there is not an option , then use index
                 }
                 {/* <RestaurantCard
                     config = {config}
