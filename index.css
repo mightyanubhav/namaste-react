@@ -37,7 +37,11 @@ img{
     width: 200px;
     height: 300px;
     border: 1px solid black;
-   
+    margin: 0 auto;
+}
+.res-card:hover{
+    border: 3px solid pink;
+    cursor: pointer;
 }
 .img-container{
     width: 95%;
@@ -46,6 +50,11 @@ img{
 }
 .text-container{
     width: 95%;
+    margin: 0 auto;
+}
+.res-container{
+    display: flex;
+    flex-wrap: wrap;
     margin: 0 auto;
 }
 .search{
