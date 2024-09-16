@@ -11,8 +11,10 @@ const Body = () =>{
     // are hook functions.
     // it is the syntax, it is just like using let listOfRestaurant = [] , but we use it let [listOfRestaurant] = useState( <default value of array >);
     // let [listOfRestaurants] = useState([]);
+    // to change this special variable we can't by normally , we need to pass arguement like let [listOfRestaurant, setListOfRestaurant]
+    // to update this we will use setListOfRestaurant
 
-    let [listOfRestaurants] = useState([
+    let [listOfRestaurants, setListOfRestaurants] = useState([
          {
             user: {
                  name: 'KFC',
@@ -47,10 +49,16 @@ const Body = () =>{
         <div className="body">
             <div className="filter">
                 <button className="filter-btn" onClick={ () =>{
-                    listOfRestaurants = listOfRestaurants.filter(
-                        (res) => res.user.age > 4.0
+
+                    const filteredList = listOfRestaurants.filter(
+                        (res) => res.user.age > 4
                     );
-                    console.log(listOfRestaurants);
+                    setListOfRestaurants(filteredList)
+
+                    // listOfRestaurants = listOfRestaurants.filter(
+                    //     (res) => res.user.age > 4.0
+                    // );
+                    // console.log(listOfRestaurants);
                 }}> Top Rated Restaurant</button>
             </div>
             <div className="res-container">  
