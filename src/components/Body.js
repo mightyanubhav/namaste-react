@@ -1,35 +1,48 @@
 import RestaurantCard from "./RestaurantCard";
 import config from "../utils/mockData";
-
+import { useState } from "react";
 
 
 const Body = () =>{
-    let listOfRestaurants = [
-        {
-           user: {
-                name: 'KFC',
-                age: 3.8,
-                id:'a'
-            }
-               
-        },
-        {
+
+    // state variable : - super poweful variable ,
+    // for that we use hooks, Intro to hooks, to create that state variable.
+    // hook is normal js function given to us by react, it is prebuild, logic is written already , multiple function s 
+    // are hook functions.
+    // it is the syntax, it is just like using let listOfRestaurant = [] , but we use it let [listOfRestaurant] = useState( <default value of array >);
+    // let [listOfRestaurants] = useState([]);
+
+    let [listOfRestaurants] = useState([
+         {
             user: {
-                 name: 'Dominos',
-                 age: 4.6,
-                 id:'b'
+                 name: 'KFC',
+                 age: 3.8,
+                 id:'a'
              }
                 
          },
          {
              user: {
-                  name: 'MCD',
-                  age: 4.1,
-                  id:'c'
+                  name: 'Dominos',
+                  age: 4.6,
+                  id:'b'
               }
                  
-          }
-    ]
+         },
+         {
+              user: {
+                   name: 'MCD',
+                   age: 4.1,
+                   id:'c'
+               }
+                  
+         }
+
+    ]);
+    // normal js variable 
+    // let listOfRestaurantsJS = [
+        
+    // ]
     return (
         <div className="body">
             <div className="filter">
