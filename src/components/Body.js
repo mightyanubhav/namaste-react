@@ -2,7 +2,6 @@ import RestaurantCard from "./RestaurantCard";
 import config from "../utils/mockData";
 import { useState } from "react";
 
-
 const Body = () =>{
 
     // state variable : - super poweful variable ,
@@ -14,33 +13,8 @@ const Body = () =>{
     // to change this special variable we can't by normally , we need to pass arguement like let [listOfRestaurant, setListOfRestaurant]
     // to update this we will use setListOfRestaurant
 
-    let [listOfRestaurants, setListOfRestaurants] = useState([
-         {
-            user: {
-                 name: 'KFC',
-                 age: 3.8,
-                 id:'a'
-             }
-                
-         },
-         {
-             user: {
-                  name: 'Dominos',
-                  age: 4.6,
-                  id:'b'
-              }
-                 
-         },
-         {
-              user: {
-                   name: 'MCD',
-                   age: 4.1,
-                   id:'c'
-               }
-                  
-         }
-
-    ]);
+    let [listOfRestaurants, setListOfRestaurants] = useState(config);
+    // now adding config data into useState.
     // normal js variable 
     // let listOfRestaurantsJS = [
         
