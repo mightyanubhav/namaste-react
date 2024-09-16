@@ -2,59 +2,108 @@
 const config = [
     {
         user: {
-          name: 'Bob',
-          age: 35,
+          name: 'KFC',
+          age: 3.8,
           id:'a'
-        },
-        settings: [
-          'blue',
-          'fr',
-        ]
+        }
+       
       },
       {
         user: {
-          name: 'marlin',
-          age: 30,
+          name: 'Meghana Foods',
+          age: 4.4,
           id:'b'
-        },
-        settings: [
-          'blue',
-          'fr',
-        ]
+        }
+       
       },
       {
         user: {
-          name: 'Bob',
-          age: 35,
+          name: 'Kanpur Food Point',
+          age: 3.2,
           id:'c'
-        },
-        settings: [
-          'blue',
-          'fr'
-        ]
+        }
+        
       },
       {
         user: {
-          name: 'Bob',
-          age: 35,
+          name: 'Call Me Chow',
+          age: 4.3,
           id:'d'
-        },
-        settings: [
-          'blue',
-          'fr'
-        ]
+        }
+      
       },
       {
         user: {
-          name: 'Bob',
-          age: 35,
+          name: 'Kannpur food Kitchen',
+          age: 4.1,
           id:'e'
-        },
-        settings: [
-          'blue',
-          'fr'
-        ]
+        }
+      },
+      {
+        user: {
+          name: 'Hot Burger & Grills',
+          age: 1.3,
+          id:'f'
+        }
       }
+      ,
+      {
+        user: {
+          name: 'Hotel Empire',
+          age: 4.2,
+          id:'g'
+        }
+      },
+      {
+        user: {
+          name: 'Biriyani Pot',
+          age: 4.1,
+          id:'h'
+        }
+      },
+      {
+        user: {
+          name: 'Foodi Kitchen',
+          age: 4.6,
+          id:'i'
+        }
+      },
+      {
+        user: {
+          name: 'Madeena Hotel',
+          age: 4.1,
+          id:'j'
+        }
+      },
+      {
+        user: {
+          name: 'Kitchen Korma',
+          age: 3.2,
+          id:'k'
+        }
+      },
+      {
+        user: {
+          name: 'Kaithi Kitchen',
+          age: 1.5,
+          id:'l'
+        }
+      },
+      {
+        user: {
+          name: 'Kitchen Rajasthan',
+          age: 4.1,
+          id:'m'
+        }
+      },
+      {
+        user: {
+          name: 'Indian Foods',
+          age: 5.0,
+          id:'n'
+        }
+      },
+     
 ];
   
 
