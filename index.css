@@ -79,3 +79,14 @@ img{
     margin: 0 auto;
   
 }
+.login{
+    width: 90px;
+    height: 30px;
+    border-radius: 5px;
+    margin-top: 15px;
+    cursor: pointer;
+}
+
+.filter{
+    display: flex;
+}
