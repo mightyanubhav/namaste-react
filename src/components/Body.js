@@ -35,12 +35,23 @@ const Body = () => {
     <div className="body">
       <div className="filter">
         <div className="search">
-          <input type="text" className="search-box" value={searchText} />
+          <input
+            type="text"
+            className="search-box"
+            value={searchText}
+            onChange={(e) => {
+              setSearchText(e.target.value);
+            }}
+          />
           <button
             onClick={() => {
               //filter the restaurant cards and update ui.
               //search text
-              console.log(searchText);
+            //   console.log(searchText);
+            //   console.log(listOfRestaurants);
+              const filteredRestaurant = listOfRestaurants.filter((res) => res.info.name.includes(searchText));
+            //   console.log(filteredRestaurant);
+              setListOfRestaurants(filteredRestaurant);
             }}
           >
             search
