@@ -1,6 +1,7 @@
 https://mightyanubhav.github.io/namaste-react/
 
 # nameste react
+<img width="1470" alt="Screenshot 2024-09-20 at 1 51 08 AM" src="https://github.com/user-attachments/assets/6687acce-e53e-4234-aad1-2ce618f4aca0">
 
 # parcel : 
 	1) Dev Build
