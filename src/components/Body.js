@@ -15,12 +15,14 @@ const Body = () =>{
 
 
     const fetchData = async () => {
+
         const data1 = await fetch(SWIGGY_API);
         const json = await data1.json();
        
         console.log(json);
-        const arrayChange = json.data.success.cards[1].gridWidget.gridElements.infoWithStyle.restaurants;
-        console.log(arrayChange.length);
+        console.log();
+        const arrayChange = json.data.cards[1].card.card.gridElements.infoWithStyle.restaurants;
+        // console.log(arrayChange.length);
         setListOfRestaurants(arrayChange);
 
     }
@@ -31,7 +33,7 @@ const Body = () =>{
                 <button className="filter-btn" onClick={ () =>{
 
                     const filteredList = listOfRestaurants.filter(
-                        (x) => x.info.avgRating > 4
+                        (x) => x.info.avgRating > 4.5
                     );
                     setListOfRestaurants(filteredList)
 
