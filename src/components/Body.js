@@ -1,7 +1,6 @@
 import RestaurantCard from "./RestaurantCard";
-import config from "../utils/mockData";
 import { useEffect, useState } from "react";
-
+import Shimmer from "./Shimmer";
 import { SWIGGY_API } from "../utils/constants";
 
 const Body = () =>{
@@ -20,13 +19,16 @@ const Body = () =>{
         const json = await data1.json();
        
         console.log(json);
-        console.log();
-        const arrayChange = json.data.cards[1].card.card.gridElements.infoWithStyle.restaurants;
-        // console.log(arrayChange.length);
+        // optional chaining.
+       
+        const arrayChange = json?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants;
+       
         setListOfRestaurants(arrayChange);
 
     }
-
+    if(listOfRestaurants.length === 0){
+        return <Shimmer />
+    }
     return (
         <div className="body">
             <div className="filter">
