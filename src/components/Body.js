@@ -14,7 +14,12 @@ const Body = () => {
   }, []);
 
   const fetchData = async () => {
-    const data1 = await fetch(SWIGGY_API);
+    const data1 = await 
+    fetch('https://proxy.cors.sh/https://www.swiggy.com/dapi/restaurants/list/v5?lat=9.91850&lng=76.25580&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING', {
+        headers: {
+        'x-cors-api-key': 'temp_19ee66ac9bfcb523f2e2cc6b1c4089f9'
+        }
+      });
     const json = await data1.json();
 
     console.log(json);
