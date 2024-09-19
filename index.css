@@ -38,7 +38,7 @@ img{
     height: 300px;
     border: 1px solid black;
     margin: auto;
- 
+    background-color: rgb(163, 155, 155);
 }
 .res-card:hover{
     border: 3px solid pink;

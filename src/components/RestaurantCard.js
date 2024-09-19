@@ -2,7 +2,7 @@ import { CDN_URL } from "../utils/constants";
 import { FOOD_IMG } from "../utils/constants";
 const  RestaurantCard = (props) =>{
     const { change } = props;
-    const { name, avgRating, cuisines, locality } = change.info;
+    const { name, avgRating, cuisines, locality, sla } = change.info;
 
     return (
         <div className="res-card">
@@ -17,6 +17,7 @@ const  RestaurantCard = (props) =>{
                 <h4>{avgRating} ★</h4> {/* Rating */}
                 <p>{cuisines.join(", ")}</p> {/* Cuisines */}
                 <h4>{locality}</h4> {/* Location */}
+                <p> {sla.deliveryTime} minutes</p>
             </div>
         </div>
     );

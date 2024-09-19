@@ -7,7 +7,7 @@ import { SWIGGY_API } from "../utils/constants";
 const Body = () =>{
 
 
-    let [listOfRestaurants, setListOfRestaurants] = useState(config);
+    let [listOfRestaurants, setListOfRestaurants] = useState([]);
     
     useEffect(() => {
         fetchData();
@@ -19,6 +19,10 @@ const Body = () =>{
         const json = await data1.json();
        
         console.log(json);
+        const arrayChange = json.data.success.cards[1].gridWidget.gridElements.infoWithStyle.restaurants;
+        console.log(arrayChange.length);
+        setListOfRestaurants(arrayChange);
+
     }
 
     return (
