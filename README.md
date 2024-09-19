@@ -1,3 +1,5 @@
+https://mightyanubhav.github.io/namaste-react/
+
 # nameste react
 
 # parcel : 
