@@ -5,6 +5,7 @@ import { SWIGGY_API } from "../utils/constants";
 
 const Body = () => {
   let [listOfRestaurants, setListOfRestaurants] = useState([]);
+  let [filteredListOfRestaurants, setFilteredListOfRestaurants] = useState([])
 
   const [searchText, setSearchText] = useState("");
 
@@ -24,11 +25,9 @@ const Body = () => {
         ?.restaurants;
 
     setListOfRestaurants(arrayChange);
+    setFilteredListOfRestaurants(arrayChange);
   };
-  //conditional rendering
-  // if(listOfRestaurants.length === 0){
-  //     return <Shimmer />
-  // }
+
   return listOfRestaurants.length === 0 ? (
     <Shimmer />
   ) : (
@@ -45,13 +44,12 @@ const Body = () => {
           />
           <button
             onClick={() => {
-              //filter the restaurant cards and update ui.
-              //search text
-            //   console.log(searchText);
-            //   console.log(listOfRestaurants);
-              const filteredRestaurant = listOfRestaurants.filter((res) => res.info.name.includes(searchText));
-            //   console.log(filteredRestaurant);
-              setListOfRestaurants(filteredRestaurant);
+              
+              const filteredRestaurant = listOfRestaurants.filter((res) =>
+                res.info.name.toLowerCase().includes(searchText.toLowerCase())
+              );
+              
+              setFilteredListOfRestaurants(filteredRestaurant);
             }}
           >
             search
@@ -63,7 +61,7 @@ const Body = () => {
             const filteredList = listOfRestaurants.filter(
               (x) => x.info.avgRating > 4.5
             );
-            setListOfRestaurants(filteredList);
+            setFilteredListOfRestaurants(filteredList);
           }}
         >
           {" "}
@@ -71,7 +69,7 @@ const Body = () => {
         </button>
       </div>
       <div className="res-container">
-        {listOfRestaurants.map((x) => (
+        {filteredListOfRestaurants.map((x) => (
           <RestaurantCard key={x.info.id} change={x} />
         ))}
       </div>
