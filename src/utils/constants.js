@@ -6,3 +6,5 @@ export const CDN_URL =
  "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,h_600/d6cc715e5180e7b29674f22383118cc6";
 
 
+export const FOOD_IMG = 
+ "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_264,h_288,c_fill/";

@@ -37,7 +37,8 @@ img{
     width: 200px;
     height: 300px;
     border: 1px solid black;
-    margin: 0 auto;
+    margin: auto;
+ 
 }
 .res-card:hover{
     border: 3px solid pink;
@@ -51,6 +52,8 @@ img{
 .text-container{
     width: 95%;
     margin: 0 auto;
+    /* Prevent overflow */
+    word-wrap: break-word; /* Break long words if needed */
 }
 .res-container{
     display: flex;
