@@ -16,8 +16,10 @@ const Body = () => {
 
   const fetchData = async () => {
     // working with live data.
-    const url = 'https://www.swiggy.com/dapi/restaurants/list/v5?lat=9.91850&lng=76.25580&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING';
-    const data1 = await fetch(SWIGGY_API);
+    const url = 
+    "https://www.swiggy.com/dapi/restaurants/list/v5?lat=26.14860&lng=85.89730&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING"
+    // 'https://www.swiggy.com/dapi/restaurants/list/v5?lat=9.91850&lng=76.25580&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING';
+    const data1 = await fetch(url);
     const json = await data1.json();
 
     console.log(json);
