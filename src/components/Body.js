@@ -16,20 +16,16 @@ const Body = () => {
 
   const fetchData = async () => {
     // working with live data.
-    // const data1 = await 
-    // fetch('https://allcorss.com/https://www.swiggy.com/dapi/restaurants/list/v5?lat=9.91850&lng=76.25580&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING', {
-    //     headers: {
-    //     'x-cors-api-key': 'temp_19ee66ac9bfcb523f2e2cc6b1c4089f9'
-    //     }
-    //   });
-    // const json = await data1.json();
+    const url = 'https://www.swiggy.com/dapi/restaurants/list/v5?lat=9.91850&lng=76.25580&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING';
+    const data1 = await fetch(SWIGGY_API);
+    const json = await data1.json();
 
-    // console.log(json);
+    console.log(json);
     // optional chaining.
 
-    const arrayChange = config
-    //   json?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants;
-
+    const arrayChange = 
+       json?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants;
+    console.log(arrayChange);
     setListOfRestaurants(arrayChange);
     setFilteredListOfRestaurants(arrayChange);
   };
